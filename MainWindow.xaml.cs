@@ -19,6 +19,22 @@ namespace Simple_RPG_Simulator_assignment
         public MainWindow()
         {
             InitializeComponent();
+
+
+            cmbNames.Items.Add("warrior");
+            cmbNames.Items.Add("wizard");
+            cmbNames.Items.Add("ranger");
+            cmbNames.Items.Add("warlock");
+            cmbNames.Items.Add("druid");
+            cmbNames.Items.Add("monk");
+            cmbNames.Items.Add("paladin");
+            cmbNames.Items.Add("cleric");
+            cmbNames.Items.Add("barberian");
+            cmbNames.Items.Add("bard");
+            cmbNames.Items.Add("rouge");
+            cmbNames.Items.Add("artificer");
+            cmbNames.Items.Add("sorcerer");
+            cmbNames.Items.Add("blood hunter");
         }
     }
 }
