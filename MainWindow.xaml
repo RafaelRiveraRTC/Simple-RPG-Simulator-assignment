@@ -11,7 +11,14 @@
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBox HorizontalAlignment="Left" Margin="94,108,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="playerName"
+            HorizontalAlignment="Left" 
+            Margin="457,14,0,0" 
+            TextWrapping="Wrap" 
+            Text="" 
+            VerticalAlignment="Top" 
+            Width="120" 
+            Grid.ColumnSpan="2"/>
 
         <Label x:Name="heroCreationSimulationStation" 
             Content="Hero Creation Simulation&#xD;&#xA;Station" 
@@ -22,29 +29,57 @@
                FontSize="26"
                FontFamily="Pacifico" Grid.ColumnSpan="2"/>
 
-        <Label Content="Choose Your Class" HorizontalAlignment="Left" Margin="238,101,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <RichTextBox Margin="10,181,289,117" Grid.ColumnSpan="2">
+        <Label Content="Choose Your Class" HorizontalAlignment="Left" Margin="270,96,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <RichTextBox Margin="162,186,137,112" Grid.ColumnSpan="2">
             <FlowDocument>
                 <Paragraph>
-                    <Run Text="RichTextBox"/>
+                    <Run x:Name="partyDisplayBox"
+                        Text=""/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
         <ComboBox x:Name="cmbNames"
             HorizontalAlignment="Left" 
-                  Margin="400,108,0,0" 
+                  Margin="376,100,0,0" 
                   VerticalAlignment="Top" 
-                  Width="120" Grid.ColumnSpan="2"/>
+                  Width="148" Grid.ColumnSpan="2" SelectionChanged="cmbNames_SelectionChanged"/>
 
 
         <Button x:Name="ItsHeroTime"
             Content="ItsHeroTime!!!" 
                 HorizontalAlignment="Left" 
-                Margin="573,109,0,0" 
-                VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                Margin="162,127,0,0" 
+                VerticalAlignment="Top" Grid.ColumnSpan="2" Height="59" Width="487" Click="ItsHeroTime_Click"/>
 
-        <Button Content="Button" HorizontalAlignment="Left" Margin="46,374,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <Label Content="Name" HorizontalAlignment="Left" Margin="24,100,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+
+
+        <Label Content="Name" HorizontalAlignment="Left" Margin="415,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Label Content="Choose Your LvL" HorizontalAlignment="Left" Margin="582,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="cmbNames_LvL"
+            HorizontalAlignment="Left" 
+            Margin="683,12,0,0" 
+            VerticalAlignment="Top" 
+            Width="98" Grid.ColumnSpan="2" SelectionChanged="cmbNames_SelectionChanged"/>
+        <Label Content="Choose Your Race" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="cmbNames_Race"
+            HorizontalAlignment="Left" 
+            Margin="115,98,0,0" 
+            VerticalAlignment="Top" 
+            Width="155" Grid.ColumnSpan="2" SelectionChanged="cmbNames_SelectionChanged"/>
+        <Label Content="Choose Your Subclass" HorizontalAlignment="Left" Margin="524,98,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="cmbNames_Subclass"
+            HorizontalAlignment="Left" 
+            Margin="649,100,0,0" 
+            VerticalAlignment="Top" 
+            Width="141" Grid.ColumnSpan="2" SelectionChanged="cmbNames_SelectionChanged"/>
+
+        <Button x:Name="BeginOurJourney"
+            Content="BeginOurJourney!!!!!" 
+                Grid.ColumnSpan="2" 
+                HorizontalAlignment="Left"
+                Margin="162,322,0,0" 
+                VerticalAlignment="Top" 
+                Width="487" Click="BeginOurJourney_Click" Height="112"/>
 
     </Grid>
 </Window>
